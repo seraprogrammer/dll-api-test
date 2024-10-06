@@ -34,7 +34,7 @@ app.post("/chat", async (req, res) => {
       },
     },
     output: (text) => {
-      return text + " 💕🌹";
+      return text ;
     },
   };
 
