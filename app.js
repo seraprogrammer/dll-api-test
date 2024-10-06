@@ -1,8 +1,14 @@
 const express = require("express");
 const { G4F } = require("g4f");
+const cors = require("cors"); // Import CORS middleware
 
 const app = express();
 const g4f = new G4F();
+
+// Enable CORS for all origins or restrict to specific origins
+app.use(cors({
+  origin: 'http://127.0.0.1:5500' // Change this to the origin you want to allow
+}));
 
 // Middleware to parse JSON requests
 app.use(express.json());
